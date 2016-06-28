@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "SevenSegment"
-  s.version      = "1.0.0"
+  s.version      = "0.0.1"
   s.summary      = "A short description of SevenSegment."
 
   # This description is used to generate tags and improve search results.
@@ -79,7 +79,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/dimohamdy/SevenSegment.git", :tag => "#{s.version}" }
+  s.source       = { :git => "http://EXAMPLE/SevenSegment.git", :tag => "#{s.version}" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -90,8 +90,8 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-    s.source_files = "SevenSegment/*.{swift}"
-    s.exclude_files = "Classes/Exclude"
+  s.source_files  = "Classes", "Classes/**/*.{h,m}"
+  s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
 
