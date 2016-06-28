@@ -10,16 +10,6 @@ import UIKit
 
 class SevenSegmentDigit: UIView {
 
-    //    //    @property (nonatomic, retain) NSNumber * digit;
-    //    @property (nonatomic, retain) NSString * character;
-    //    @property BOOL dotIsOn;
-    //    @property (nonatomic, retain) UIColor * mainColor;
-    //
-    //    //- (void) SSSetContextColorsFor:(NSNumber *) dig with:(NSArray *) onDigits inContext:(CGContextRef) context;
-    //    - (void) SSSetContextColorsFor:(NSString *) chr with:(NSArray *) onDigits inContext:(CGContextRef) context;
-
-
-
 
     var digit: Int = 0
     var mainColor: UIColor?
@@ -67,7 +57,7 @@ class SevenSegmentDigit: UIView {
             //    if (w>h) {
             //        w = h / 2.0f;
             //    }
-            hx = (w / 7.50) - adj
+            hx = (w / 7.5) - adj
             // /10.0; //30.5f;
             //NSLog("hx%f", hx)
             hy = hx / 2.0
@@ -90,6 +80,7 @@ class SevenSegmentDigit: UIView {
             part2 =  Int(w == 0)
             boolValue = Bool(part1 | part2)
         }
+//        hx +=  hy
         let context: CGContextRef = UIGraphicsGetCurrentContext()!
         CGContextClearRect(context, self.frame)
         CGContextSetStrokeColorWithColor(context, SevenSegmentDigit.redColor())
@@ -97,8 +88,8 @@ class SevenSegmentDigit: UIView {
         CGContextBeginPath(context)
         //    NSArray * one = [NSArray arrayWithObjects:[NSNumber numberWithInt:1], [NSNumber numberWithInt:4], [NSNumber numberWithInt:5], [NSNumber numberWithInt:6], [NSNumber numberWithInt:8], [NSNumber numberWithInt:9], [NSNumber numberWithInt:0], nil];
         //    [self SSSetContextColorsFor:digit  with:one inContext:context];
-        let one: [String] = ["4", "5", "6", "8", "9", "0"]
-        self.SSSetContextColorsFor(character!, digits: one, inContext: context)
+        let F: [String] = ["4", "5", "6", "8", "9", "0"]
+        self.SSSetContextColorsFor(character!, digits: F, inContext: context)
         //1
         CGContextMoveToPoint(context, hx - filler, hx + filler)
         CGContextAddLineToPoint(context, hx + hy - filler, hx + hy + filler)
@@ -108,8 +99,8 @@ class SevenSegmentDigit: UIView {
         CGContextAddLineToPoint(context, hx - hy - filler, hx + hy + filler)
         CGContextClosePath(context)
         CGContextDrawPath(context, .FillStroke)
-        let two: [String] = ["2", "3", "5", "6", "7", "8", "9", "0"]
-        self.SSSetContextColorsFor(character!, digits: two, inContext: context)
+        let A: [String] = ["2", "3", "5", "6", "7", "8", "9", "0"]
+        self.SSSetContextColorsFor(character!, digits: A, inContext: context)
         //2
         CGContextMoveToPoint(context, hx, hx - filler)
         CGContextAddLineToPoint(context, hx + hy, hx + hy - filler)
@@ -119,8 +110,8 @@ class SevenSegmentDigit: UIView {
         CGContextAddLineToPoint(context, hx + hy, hx - hy - filler)
         CGContextClosePath(context)
         CGContextDrawPath(context, .FillStroke)
-        let three: [String] = ["1", "2", "3", "4", "7", "8", "9", "0"]
-        self.SSSetContextColorsFor(character!, digits: three, inContext: context)
+        let B: [String] = ["1", "2", "3", "4", "7", "8", "9", "0"]
+        self.SSSetContextColorsFor(character!, digits: B, inContext: context)
         //3
         CGContextMoveToPoint(context, hx + hOffSet + filler * 1, hx + filler)
         CGContextAddLineToPoint(context, hx + hy + hOffSet + filler * 1, hx + hy + filler)
@@ -130,8 +121,8 @@ class SevenSegmentDigit: UIView {
         CGContextAddLineToPoint(context, hx - hy + hOffSet + filler * 1, hx + hy + filler)
         CGContextClosePath(context)
         CGContextDrawPath(context, .FillStroke)
-        let four: [String] = ["2", "3", "4", "5", "6", "8", "9", "-"]
-        self.SSSetContextColorsFor(character!, digits: four, inContext: context)
+        let G: [String] = ["2", "3", "4", "5", "6", "8", "9", "-"]
+        self.SSSetContextColorsFor(character!, digits: G, inContext: context)
         //4
         CGContextMoveToPoint(context, hx, hx + vOffSet + filler * 2)
         CGContextAddLineToPoint(context, hx + hy, hx + hy + vOffSet + filler * 2)
@@ -141,8 +132,8 @@ class SevenSegmentDigit: UIView {
         CGContextAddLineToPoint(context, hx + hy, hx - hy + vOffSet + filler * 2)
         CGContextClosePath(context)
         CGContextDrawPath(context, .FillStroke)
-        let five: [String] = ["2", "6", "8", "0"]
-        self.SSSetContextColorsFor(character!, digits: five, inContext: context)
+        let E: [String] = ["2", "6", "8", "0"]
+        self.SSSetContextColorsFor(character!, digits: E, inContext: context)
         //5
         CGContextMoveToPoint(context, hx - filler, hx + vOffSet + filler * 3)
         CGContextAddLineToPoint(context, hx + hy - filler, hx + hy + vOffSet + filler * 3)
@@ -152,8 +143,8 @@ class SevenSegmentDigit: UIView {
         CGContextAddLineToPoint(context, hx - hy - filler, hx + hy + vOffSet + filler * 3)
         CGContextClosePath(context)
         CGContextDrawPath(context, .FillStroke)
-        let six: [String] = ["2", "3", "5", "6", "8", "9", "0"]
-        self.SSSetContextColorsFor(character!, digits: six, inContext: context)
+        let D: [String] = ["2", "3", "5", "6", "8", "9", "0"]
+        self.SSSetContextColorsFor(character!, digits: D, inContext: context)
         //6
         CGContextMoveToPoint(context, hx, hx + vOffSet * 2 + filler * 4)
         CGContextAddLineToPoint(context, hx + hy, hx + hy + vOffSet * 2 + filler * 4)
@@ -163,8 +154,8 @@ class SevenSegmentDigit: UIView {
         CGContextAddLineToPoint(context, hx + hy, hx - hy + vOffSet * 2 + filler * 4)
         CGContextClosePath(context)
         CGContextDrawPath(context, .FillStroke)
-        let seven: [String] = ["1", "3", "4", "5", "6", "7", "8", "9", "0"]
-        self.SSSetContextColorsFor(character!, digits: seven, inContext: context)
+        let C: [String] = ["1", "3", "4", "5", "6", "7", "8", "9", "0"]
+        self.SSSetContextColorsFor(character!, digits: C, inContext: context)
         //7
         CGContextMoveToPoint(context, hx + hOffSet + filler * 1, hx + vOffSet + filler * 3)
         CGContextAddLineToPoint(context, hx + hy + hOffSet + filler * 1, hx + hy + vOffSet + filler * 3)
@@ -183,10 +174,10 @@ class SevenSegmentDigit: UIView {
 
         }
         //dot
-//        CGContextMoveToPoint(context, hx * 2.5 + hOffSet + hy, hx * 1.5 + hy + hz + vOffSet)
-//        CGContextAddArc(context, hx * 2.5 + hOffSet, hx * 1.5 + hy + hz + vOffSet, hy, 0, -6.28, 1)
-//        CGContextDrawPath(context, .FillStroke)
-//        CGContextFlush(context)
+        CGContextMoveToPoint(context, hx * 2.5 + hOffSet + hy, hx * 1.5 + hy + hz + vOffSet)
+        CGContextAddArc(context, hx * 2.5 + hOffSet, hx * 1.5 + hy + hz + vOffSet, hy, 0, -6.28, 1)
+        CGContextDrawPath(context, .FillStroke)
+        CGContextFlush(context)
 
     }
 

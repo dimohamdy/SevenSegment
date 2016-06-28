@@ -17,7 +17,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         timer = NSTimer.scheduledTimerWithTimeInterval(0.4, target: self, selector: #selector(ViewController.update), userInfo: nil, repeats: true)
-        sevenSegmentPanel.number = count
+//        sevenSegmentPanel.number = 1
 
     }
 

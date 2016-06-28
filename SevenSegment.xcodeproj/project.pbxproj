@@ -14,8 +14,6 @@
 		3D19175A1D21A5F30076DE42 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D1917581D21A5F30076DE42 /* LaunchScreen.storyboard */; };
 		3D1917651D21A5F40076DE42 /* SevenSegmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1917641D21A5F40076DE42 /* SevenSegmentTests.swift */; };
 		3D1917701D21A5F40076DE42 /* SevenSegmentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D19176F1D21A5F40076DE42 /* SevenSegmentUITests.swift */; };
-		3D19177E1D21A6200076DE42 /* MinusButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D19177D1D21A6200076DE42 /* MinusButton.swift */; };
-		3D1917801D21A64C0076DE42 /* PlusButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D19177F1D21A64C0076DE42 /* PlusButton.swift */; };
 		3D1917821D21A65D0076DE42 /* SevenSegmentDigit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1917811D21A65D0076DE42 /* SevenSegmentDigit.swift */; };
 		3D1917841D21A66C0076DE42 /* SevenSegmentPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1917831D21A66C0076DE42 /* SevenSegmentPanel.swift */; };
 /* End PBXBuildFile section */
@@ -51,8 +49,6 @@
 		3D19176B1D21A5F40076DE42 /* SevenSegmentUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SevenSegmentUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D19176F1D21A5F40076DE42 /* SevenSegmentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SevenSegmentUITests.swift; sourceTree = "<group>"; };
 		3D1917711D21A5F40076DE42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3D19177D1D21A6200076DE42 /* MinusButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MinusButton.swift; sourceTree = "<group>"; };
-		3D19177F1D21A64C0076DE42 /* PlusButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlusButton.swift; sourceTree = "<group>"; };
 		3D1917811D21A65D0076DE42 /* SevenSegmentDigit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SevenSegmentDigit.swift; sourceTree = "<group>"; };
 		3D1917831D21A66C0076DE42 /* SevenSegmentPanel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SevenSegmentPanel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -111,8 +107,6 @@
 				3D1917561D21A5F30076DE42 /* Assets.xcassets */,
 				3D1917581D21A5F30076DE42 /* LaunchScreen.storyboard */,
 				3D19175B1D21A5F30076DE42 /* Info.plist */,
-				3D19177D1D21A6200076DE42 /* MinusButton.swift */,
-				3D19177F1D21A64C0076DE42 /* PlusButton.swift */,
 				3D1917811D21A65D0076DE42 /* SevenSegmentDigit.swift */,
 				3D1917831D21A66C0076DE42 /* SevenSegmentPanel.swift */,
 			);
@@ -271,9 +265,7 @@
 				3D1917521D21A5F30076DE42 /* ViewController.swift in Sources */,
 				3D1917501D21A5F30076DE42 /* AppDelegate.swift in Sources */,
 				3D1917841D21A66C0076DE42 /* SevenSegmentPanel.swift in Sources */,
-				3D19177E1D21A6200076DE42 /* MinusButton.swift in Sources */,
 				3D1917821D21A65D0076DE42 /* SevenSegmentDigit.swift in Sources */,
-				3D1917801D21A64C0076DE42 /* PlusButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -498,6 +490,7 @@
 				3D1917761D21A5F40076DE42 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3D1917771D21A5F40076DE42 /* Build configuration list for PBXNativeTarget "SevenSegmentTests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +499,7 @@
 				3D1917791D21A5F40076DE42 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3D19177A1D21A5F40076DE42 /* Build configuration list for PBXNativeTarget "SevenSegmentUITests" */ = {
 			isa = XCConfigurationList;
@@ -514,6 +508,7 @@
 				3D19177C1D21A5F40076DE42 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
