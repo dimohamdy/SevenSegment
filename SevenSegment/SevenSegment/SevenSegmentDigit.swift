@@ -18,7 +18,7 @@ class SevenSegmentDigit: UIView {
     func SSSetContextColorsFor(chr: Character, digits: [String], inContext context: CGContextRef) {
         //    if ([onDigits indexOfObject:dig]==NSNotFound)
         let stringDigits: String = digits.joinWithSeparator("")
-        if let index = stringDigits.lowercaseString.characters.indexOf(chr) {
+        if stringDigits.lowercaseString.characters.indexOf(chr) != nil {
             CGContextSetStrokeColorWithColor(context, UIColor.redColor().CGColor)
             CGContextSetFillColorWithColor(context, UIColor(red: 0.8, green: 0.0, blue: 0.0, alpha: 0.5).CGColor)
             CGContextSetShadowWithColor(context, CGSize(width: 1.5, height: 1.5), 10.0, UIColor(red: 0.6, green: 0.0, blue: 0.1, alpha: 1.0).CGColor)
@@ -80,7 +80,7 @@ class SevenSegmentDigit: UIView {
             part2 =  Int(w == 0)
             boolValue = Bool(part1 | part2)
         }
-//        hx +=  hy
+        //        hx +=  hy
         let context: CGContextRef = UIGraphicsGetCurrentContext()!
         CGContextClearRect(context, self.frame)
         CGContextSetStrokeColorWithColor(context, SevenSegmentDigit.redColor())
